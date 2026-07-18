@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Nexus | Siberpunk Karakter Arşivi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-grid"></div>
+    
+    <header>
+        <h1 class="glitch" data-text="NEON NEXUS">NEON NEXUS</h1>
+        <p>Karakter Veritabanına Hoş Geldiniz. Dosyaları incelemek için kartlara tıklayın.</p>
+    </header>
+
+    <main class="container">
+        <!-- Character 1 -->
+        <div class="character-wrapper">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="assets/cyber_warrior.jpg" alt="Cyber Warrior">
+                        <div class="card-title">Kael "Demir Yumruk"</div>
+                    </div>
+                    <div class="card-back">
+                        <h2>Kael "Demir Yumruk"</h2>
+                        <div class="story">
+                            <p>Eski bir mega-şirket güvenlik şefi olan Kael, yozlaşmış sistemi fark edince yeraltına çekildi. Vücudunun %60'ı sibernetik olan bu savaşçı, artık sokakların adaletini sağlıyor.</p>
+                            <ul>
+                                <li><strong>Sınıf:</strong> Siber Savaşçı</li>
+                                <li><strong>Silah:</strong> Plazma Bıçakları</li>
+                                <li><strong>Motivasyon:</strong> İntikam</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="hologram-btn" onclick="showHologram('assets/cyber_warrior.jpg', 'Kael')">
+                <span class="icon">🌀</span> Hologram
+            </button>
+        </div>
+
+        <!-- Character 2 -->
+        <div class="character-wrapper">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="assets/neon_hacker.jpg" alt="Neon Hacker">
+                        <div class="card-title">Nyx "Gölge Ağ"</div>
+                    </div>
+                    <div class="card-back">
+                        <h2>Nyx "Gölge Ağ"</h2>
+                        <div class="story">
+                            <p>Gerçek adı bilinmeyen Nyx, sistemlerin en derinlerine sızabilen efsanevi bir hacker. Zihni doğrudan ağa bağlı ve verileri bir ressamın boyayı kullandığı gibi kullanıyor.</p>
+                            <ul>
+                                <li><strong>Sınıf:</strong> Ağ Sızıcı</li>
+                                <li><strong>Silah:</strong> Nöral Deck</li>
+                                <li><strong>Motivasyon:</strong> Bilgi Özgürlüğü</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="hologram-btn" onclick="showHologram('assets/neon_hacker.jpg', 'Nyx')">
+                <span class="icon">🌀</span> Hologram
+            </button>
+        </div>
+
+        <!-- Character 3 -->
+        <div class="character-wrapper">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="assets/holo_mage.jpg" alt="Holo Mage">
+                        <div class="card-title">Vex "Kuantum"</div>
+                    </div>
+                    <div class="card-back">
+                        <h2>Vex "Kuantum"</h2>
+                        <div class="story">
+                            <p>Teknolojiyi büyü gibi kullanan Vex, kuantum dalgalanmalarını manipüle ederek fizik kurallarını esnetebiliyor. O bir teknoloji büyücüsü ve gerçekliği yeniden yazıyor.</p>
+                            <ul>
+                                <li><strong>Sınıf:</strong> Tekno-Büyücü</li>
+                                <li><strong>Silah:</strong> Kuantum Eldiveni</li>
+                                <li><strong>Motivasyon:</strong> Sınırları Aşmak</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="hologram-btn" onclick="showHologram('assets/holo_mage.jpg', 'Vex')">
+                <span class="icon">🌀</span> Hologram
+            </button>
+        </div>
+    </main>
+
+    <!-- Hologram Modal -->
+    <div id="hologram-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeHologram()">&times;</button>
+            <div class="hologram-container">
+                <img id="hologram-image" src="" alt="Hologram">
+                <div class="scanline"></div>
+                <div class="hologram-base"></div>
+            </div>
+            <h2 id="hologram-name" class="glitch" data-text="İsim">İsim</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
