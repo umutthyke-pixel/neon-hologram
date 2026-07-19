@@ -3,11 +3,11 @@ function flipCard(card) {
 }
 
 const modal = document.getElementById('hologram-modal');
-const holoModel = document.getElementById('hologram-model');
+const holoImage = document.getElementById('hologram-image');
 const holoName = document.getElementById('hologram-name');
 
-function showHologram(modelSrc, name) {
-    holoModel.src = modelSrc;
+function showHologram(imageSrc, name) {
+    holoImage.src = imageSrc;
     holoName.innerText = name;
     holoName.setAttribute('data-text', name); 
     
