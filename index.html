@@ -3,108 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Nexus | Siberpunk Karakter Arşivi</title>
+    <title>CS2 Ajan Veritabanı</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Google Model Viewer for Real 3D -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
     <div class="background-grid"></div>
     
     <header>
-        <h1 class="glitch" data-text="NEON NEXUS">NEON NEXUS</h1>
-        <p>Karakter Veritabanına Hoş Geldiniz. Dosyaları incelemek için kartlara tıklayın.</p>
+        <h1 class="glitch" data-text="CS2 ARCHIVES">CS2 ARCHIVES</h1>
+        <p>Ajan Veritabanına Hoş Geldiniz. Dosyaları incelemek için kartlara tıklayın.</p>
     </header>
 
     <main class="container">
-        <!-- Character 1 -->
-        <div class="character-wrapper">
-            <div class="card" onclick="flipCard(this)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="assets/cyber_warrior.jpg" alt="Cyber Warrior">
-                        <div class="card-title">Kael "Demir Yumruk"</div>
-                    </div>
-                    <div class="card-back">
-                        <h2>Kael "Demir Yumruk"</h2>
-                        <div class="story">
-                            <p>Eski bir mega-şirket güvenlik şefi olan Kael, yozlaşmış sistemi fark edince yeraltına çekildi. Vücudunun %60'ı sibernetik olan bu savaşçı, artık sokakların adaletini sağlıyor.</p>
-                            <ul>
-                                <li><strong>Sınıf:</strong> Siber Savaşçı</li>
-                                <li><strong>Silah:</strong> Plazma Bıçakları</li>
-                                <li><strong>Motivasyon:</strong> İntikam</li>
-                            </ul>
+        
+        <!-- CT Agents -->
+        <h2 class="faction-title ct-title">Counter-Terrorists</h2>
+        <div class="faction-group">
+            <div class="character-wrapper">
+                <div class="card ct-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/characters/customplayer_ctm_fbi_variantb.e3725b306b9b1e9c2049a4ea961a8cc3e7dfa81e.png" alt="Special Agent Ava">
+                            <div class="card-title">Special Agent Ava</div>
+                        </div>
+                        <div class="card-back">
+                            <h2>Special Agent Ava</h2>
+                            <div class="story">
+                                <p>Hafife alınmasına rağmen takımının gizli silahı oldu. FBI onur madalyalarının beşinden üçüne sahip. Temiz galibiyetleri ve kötü adamları pataklamayı sever.</p>
+                                <ul>
+                                    <li><strong>Birlik:</strong> FBI</li>
+                                    <li><strong>Rol:</strong> Taktiksel Uzman</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button class="hologram-btn ct-btn" onclick="showHologram('https://modelviewer.dev/shared-assets/models/Astronaut.glb', 'Special Agent Ava')">
+                    <span class="icon">🌀</span> 3D Hologram
+                </button>
             </div>
-            <button class="hologram-btn" onclick="showHologram('assets/cyber_warrior_holo.jpg', 'Kael')">
-                <span class="icon">🌀</span> Hologram
-            </button>
+
+            <div class="character-wrapper">
+                <div class="card ct-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/characters/customplayer_ctm_st6_variantm.074e53db787cf8ea9c8114f09d8e7b3e10bd9b46.png" alt="Cmdr. Frank Baroud">
+                            <div class="card-title">Cmdr. Frank 'Wet Sox' Baroud</div>
+                        </div>
+                        <div class="card-back">
+                            <h2>Cmdr. Frank Baroud</h2>
+                            <div class="story">
+                                <p>Donanma Haçı madalyasına sahip nadir isimlerden. Su altı patlayıcı uzmanı ve teçhizatını takıntılı derecede kontrol ettiği için "Wet Sox" lakabını almış.</p>
+                                <ul>
+                                    <li><strong>Birlik:</strong> SEAL Frogman</li>
+                                    <li><strong>Rol:</strong> Patlayıcı Uzmanı</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="hologram-btn ct-btn" onclick="showHologram('https://modelviewer.dev/shared-assets/models/Astronaut.glb', 'Cmdr. Frank Baroud')">
+                    <span class="icon">🌀</span> 3D Hologram
+                </button>
+            </div>
         </div>
 
-        <!-- Character 2 -->
-        <div class="character-wrapper">
-            <div class="card" onclick="flipCard(this)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="assets/neon_hacker.jpg" alt="Neon Hacker">
-                        <div class="card-title">Nyx "Gölge Ağ"</div>
-                    </div>
-                    <div class="card-back">
-                        <h2>Nyx "Gölge Ağ"</h2>
-                        <div class="story">
-                            <p>Gerçek adı bilinmeyen Nyx, sistemlerin en derinlerine sızabilen efsanevi bir hacker. Zihni doğrudan ağa bağlı ve verileri bir ressamın boyayı kullandığı gibi kullanıyor.</p>
-                            <ul>
-                                <li><strong>Sınıf:</strong> Ağ Sızıcı</li>
-                                <li><strong>Silah:</strong> Nöral Deck</li>
-                                <li><strong>Motivasyon:</strong> Bilgi Özgürlüğü</li>
-                            </ul>
+        <!-- T Agents -->
+        <h2 class="faction-title t-title">Terrorists</h2>
+        <div class="faction-group">
+            <div class="character-wrapper">
+                <div class="card t-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/characters/customplayer_tm_professional_varf.2db00c43144efb483c6ddb1c9c57d76b1b536ab4.png" alt="Sir Bloody Miami Darryl">
+                            <div class="card-title">Sir Bloody Miami Darryl</div>
+                        </div>
+                        <div class="card-back">
+                            <h2>Miami Darryl</h2>
+                            <div class="story">
+                                <p>Yüksek teknoloji kullanan paralı askerlerin lideri. Rahat tavırları ve çiçekli gömleğiyle çatışmanın ortasında bile dalga geçebilen bir psikopat.</p>
+                                <ul>
+                                    <li><strong>Birlik:</strong> The Professionals</li>
+                                    <li><strong>Rol:</strong> Lider</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button class="hologram-btn t-btn" onclick="showHologram('https://modelviewer.dev/shared-assets/models/RobotExpressive.glb', 'Sir Bloody Miami Darryl')">
+                    <span class="icon">🌀</span> 3D Hologram
+                </button>
             </div>
-            <button class="hologram-btn" onclick="showHologram('assets/neon_hacker_holo.jpg', 'Nyx')">
-                <span class="icon">🌀</span> Hologram
-            </button>
-        </div>
 
-        <!-- Character 3 -->
-        <div class="character-wrapper">
-            <div class="card" onclick="flipCard(this)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="assets/holo_mage.jpg" alt="Holo Mage">
-                        <div class="card-title">Vex "Kuantum"</div>
-                    </div>
-                    <div class="card-back">
-                        <h2>Vex "Kuantum"</h2>
-                        <div class="story">
-                            <p>Teknolojiyi büyü gibi kullanan Vex, kuantum dalgalanmalarını manipüle ederek fizik kurallarını esnetebiliyor. O bir teknoloji büyücüsü ve gerçekliği yeniden yazıyor.</p>
-                            <ul>
-                                <li><strong>Sınıf:</strong> Tekno-Büyücü</li>
-                                <li><strong>Silah:</strong> Kuantum Eldiveni</li>
-                                <li><strong>Motivasyon:</strong> Sınırları Aşmak</li>
-                            </ul>
+            <div class="character-wrapper">
+                <div class="card t-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/characters/customplayer_tm_balkan_variantg.e5cf1567bcffc361daeb702db9ffc57193f4e3c8.png" alt="Rezan The Ready">
+                            <div class="card-title">Rezan The Ready</div>
+                        </div>
+                        <div class="card-back">
+                            <h2>Rezan The Ready</h2>
+                            <div class="story">
+                                <p>Sabre örgütünün operasyon şefi ve bomba uzmanı. Öfke kontrolü sorunu var ve "Hazırlıklı Olmanın Neşesi" adlı kitabın da yazarı.</p>
+                                <ul>
+                                    <li><strong>Birlik:</strong> Sabre</li>
+                                    <li><strong>Rol:</strong> Operasyon Şefi</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button class="hologram-btn t-btn" onclick="showHologram('https://modelviewer.dev/shared-assets/models/RobotExpressive.glb', 'Rezan The Ready')">
+                    <span class="icon">🌀</span> 3D Hologram
+                </button>
             </div>
-            <button class="hologram-btn" onclick="showHologram('assets/holo_mage.jpg', 'Vex')">
-                <span class="icon">🌀</span> Hologram
-            </button>
         </div>
     </main>
 
-    <!-- Hologram Modal -->
+    <!-- Real 3D Hologram Modal -->
     <div id="hologram-modal" class="modal">
         <div class="modal-content">
             <button class="close-btn" onclick="closeHologram()">&times;</button>
             <div class="hologram-container">
-                <img id="hologram-image" src="" alt="Hologram">
-                <div class="scanline"></div>
+                <model-viewer id="hologram-model" 
+                    src="" 
+                    alt="3D Hologram Model" 
+                    auto-rotate 
+                    camera-controls 
+                    rotation-per-second="30deg"
+                    interaction-prompt="none"
+                    environment-image="neutral"
+                    shadow-intensity="1">
+                </model-viewer>
                 <div class="hologram-base"></div>
             </div>
             <h2 id="hologram-name" class="glitch" data-text="İsim">İsim</h2>
+            <p style="color: #aaa; margin-top: 10px; text-align: center;">Farenizle modeli tutup çevirebilir ve yakınlaştırabilirsiniz.<br><small>(Not: Gerçek CS2 3D dosyaları web ortamında bulunmadığından sistem placeholder 3D model kullanmaktadır.)</small></p>
         </div>
     </div>
 
